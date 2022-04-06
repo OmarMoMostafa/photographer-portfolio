@@ -1,0 +1,117 @@
+.about-page-wrapper {
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+}
+
+// image section
+.about-image {
+    background-color: $primary-dark;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .img-container {
+        height: 50%;
+        border: 10px solid $primary;
+        position: relative;
+        z-index: 1;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            border: 10px solid $secondary-color;
+            z-index: -1;
+            transform: translate(-38px, 20px);
+        }
+    }
+
+    @media (max-width: 767px) {
+       & {
+           height: 50%;
+       }
+
+        .img-container {
+            height: 80%;
+
+            &::after {
+                transform: translate(-50px, 0px);
+            }
+        }
+    }
+
+}
+
+// about section
+.about-me {
+    background-color: $primary;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+
+    .heading {
+        margin-bottom: 3rem;    
+        position: relative;  
+        
+        &::before {
+            content: "";
+            height: 100%;
+            width: 60px;
+            border-bottom: 2px solid $secondary-color;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    p {
+        margin-bottom: 1rem;
+        width: 90%;
+        color: $grey;
+    }
+
+    .skills {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .skill-progress {
+            background-color: $primary-dark;
+            width: 90%;
+            height: 2rem;
+            margin: 1rem 0;
+            z-index: 1;
+            text-shadow: 2px 2px  $primary;
+            border-radius: 10px;
+            position: relative;
+
+            .inner {
+                background-color: $secondary-color;
+                padding: 5px;
+                width: 90%;
+                height: 100%;
+                border-radius: 10px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding:2rem;
+    }
+}

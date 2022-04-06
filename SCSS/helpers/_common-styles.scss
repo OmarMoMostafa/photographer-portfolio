@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, Tahoma, Geneva, Verdana;
+}
+
+a {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $primary;
+        border: 0;
+    }
+
+    &.active {
+        background-color: $secondary-color;
+        color: $primary;
+    }
+}
+
+a.btn {
+    border: 1px solid $white;
+    padding: 10px 20px; 
+}
+
+ul {
+    list-style: none;
+}
+

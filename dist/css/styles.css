@@ -5,11 +5,11 @@
   font-family: sans-serif, Tahoma, Geneva, Verdana;
 }
 
-.page-wrapper, .about-page-wrapper {
+.page-wrapper {
   display: flex;
   height: 100vh;
 }
-.page-wrapper .bars-btn, .about-page-wrapper .bars-btn {
+.page-wrapper .bars-btn {
   display: none;
   z-index: 5;
   position: absolute;
@@ -19,7 +19,7 @@
   cursor: pointer;
 }
 @media (max-width: 767px) {
-  .page-wrapper .bars-btn, .about-page-wrapper .bars-btn {
+  .page-wrapper .bars-btn {
     display: block;
     color: #dddddd;
   }
@@ -49,6 +49,8 @@ ul {
 }
 
 nav {
+  position: absolute;
+  right: 0;
   background-color: #282828;
   height: 100%;
   display: flex;
@@ -74,6 +76,19 @@ nav ul li a {
   nav {
     display: none;
   }
+}
+
+.heading {
+  margin-bottom: 3rem;
+  position: relative;
+}
+.heading::before {
+  content: "";
+  height: 100%;
+  width: 60px;
+  border-bottom: 2px solid #fcb92c;
+  position: absolute;
+  left: 0;
 }
 
 .showcase {
@@ -192,7 +207,7 @@ nav ul li a {
 }
 
 @media (max-width: 767px) {
-  .about-page-wrapper {
+  .about-page {
     flex-direction: column;
   }
 }
@@ -236,6 +251,11 @@ nav ul li a {
     transform: translate(-50px, 0px);
   }
 }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .about-image .img-container {
+    height: 36%;
+  }
+}
 
 .about-me {
   background-color: #313131;
@@ -244,18 +264,6 @@ nav ul li a {
   flex-direction: column;
   justify-content: center;
   padding-left: 2rem;
-}
-.about-me .heading {
-  margin-bottom: 3rem;
-  position: relative;
-}
-.about-me .heading::before {
-  content: "";
-  height: 100%;
-  width: 60px;
-  border-bottom: 2px solid #fcb92c;
-  position: absolute;
-  left: 0;
 }
 .about-me p {
   margin-bottom: 1rem;
@@ -293,6 +301,46 @@ nav ul li a {
   .about-me {
     padding: 2rem;
   }
+}
+
+.portfolio-page {
+  background-color: #313131;
+  color: #dddddd;
+  overflow: hidden;
+}
+.portfolio-page .content {
+  width: 100%;
+}
+.portfolio-page .content .heading {
+  margin: 2rem;
+}
+.portfolio-page .content .portfolio {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  overflow-x: scroll;
+}
+.portfolio-page .content .scroll-right,
+.portfolio-page .content .scroll-left {
+  position: fixed;
+  right: 6rem;
+  top: 50%;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 2px solid #fcb92c;
+  background: #282828;
+  color: #fcb92c;
+  box-shadow: 7px 7px 10px #313131;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.portfolio-page .content .scroll-left {
+  left: 6rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

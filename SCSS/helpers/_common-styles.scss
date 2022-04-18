@@ -5,9 +5,8 @@
     font-family: sans-serif, Tahoma, Geneva, Verdana;
 }
 
-.page-wrapper, .about-page-wrapper {
+.page-wrapper {
     display: flex;
-    // justify-content: space-between;
     height: 100vh;
 
     .bars-btn {
@@ -55,6 +54,8 @@ ul {
 }
 
 nav {
+    position: absolute;
+    right: 0;
     background-color: $primary-dark;
     height: 100%;
     display: flex;
@@ -82,5 +83,19 @@ nav {
         & {
             display: none;
         }
+    }
+}
+
+.heading {
+    margin-bottom: 3rem;    
+    position: relative;  
+    
+    &::before {
+        content: "";
+        height: 100%;
+        width: 60px;
+        border-bottom: 2px solid $secondary-color;
+        position: absolute;
+        left: 0;
     }
 }

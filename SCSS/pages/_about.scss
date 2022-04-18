@@ -1,4 +1,4 @@
-.about-page-wrapper {
+.about-page {
     @media (max-width: 767px) {
         flex-direction: column;
     }
@@ -50,6 +50,13 @@
         }
     }
 
+    @media (min-width: 768px) and (max-width: 991.98px) {
+
+        .img-container {
+                height: 36%;
+            }
+        }
+
 }
 
 // about section
@@ -60,20 +67,6 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 2rem;
-
-    .heading {
-        margin-bottom: 3rem;    
-        position: relative;  
-        
-        &::before {
-            content: "";
-            height: 100%;
-            width: 60px;
-            border-bottom: 2px solid $secondary-color;
-            position: absolute;
-            left: 0;
-        }
-    }
 
     p {
         margin-bottom: 1rem;

@@ -1,0 +1,45 @@
+.portfolio-page {
+    background-color: $primary;
+    color: $white;
+    overflow: hidden;
+
+    .content {
+        width: 100%;
+
+        .heading {
+            margin: 2rem;
+        }
+        
+        .portfolio {
+           display: grid;
+           //make it dynamic
+           grid-template-columns: repeat(6, 1fr);
+           gap: 2rem;
+           padding: 2rem;
+           overflow-x: scroll;
+        }
+
+        .scroll-right,
+        .scroll-left {
+            position: fixed;
+            right: 6rem;
+            top: 50%;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            border: 2px solid $secondary-color;
+            background: $primary-dark;
+            color: $secondary-color;
+            box-shadow: 7px 7px 10px #313131;            
+            cursor: pointer;
+            @include center-children;
+            font-size: 2rem;
+        }
+
+        .scroll-left {
+            left: 6rem;
+            // decrease distance in responsiveness
+        }
+    }
+
+}

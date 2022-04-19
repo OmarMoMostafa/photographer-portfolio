@@ -42,19 +42,7 @@
         }
     }
 
-    .social-links {
-        display: flex;
-        justify-content: center;
-        a {
-            margin: 0 1rem;
-            width: 20px;
-            height: 20px;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
+    
 
     @media (max-width: 767px) {
         & {

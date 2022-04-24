@@ -9,9 +9,10 @@
     background-color: $primary-dark;
     height: 100%;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center-children;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
 
     .img-container {
         height: 50%;
@@ -38,16 +39,17 @@
 
     @media (max-width: 767px) {
        & {
-           height: 50%;
+        //    height: 50%;
+        display: none;
        }
 
-        .img-container {
-            height: 80%;
+        // .img-container {
+        //     height: 80%;
 
-            &::after {
-                transform: translate(-50px, 0px);
-            }
-        }
+        //     &::after {
+        //         transform: translate(-50px, 0px);
+        //     }
+        // }
     }
 
     @media (min-width: 768px) and (max-width: 991.98px) {
@@ -94,18 +96,20 @@
             .inner {
                 background-color: $secondary-color;
                 padding: 5px;
-                width: 90%;
+                width: 0;
                 height: 100%;
                 border-radius: 10px;
                 position: absolute;
                 top: 0;
                 left: 0;
-                z-index: -1;
+                // z-index: -1;
+                transition: all 1s ease-in-out;
             }
         }
     }
 
     @media (max-width: 767px) {
         padding:2rem;
+        height: 100%;
     }
 }

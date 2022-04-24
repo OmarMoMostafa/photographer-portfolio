@@ -98,6 +98,7 @@
 
         p {
             color: $grey;
+            width: 80%;
         }
 
         a {
@@ -114,6 +115,11 @@
         .details {
             position: absolute;
             z-index: 5;
+
+            p {
+                width: 100%;
+                font-size: 12px;
+            }
         }
     }
 

@@ -1,8 +1,9 @@
 .contacts-page {
     background: $primary;
     color: $white;
+    overflow: hidden;
 
-    .photo {
+    .contacts-photo {
         @include center-children;
         background-color: $primary-dark;
         width: 100%;

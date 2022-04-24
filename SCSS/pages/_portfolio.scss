@@ -14,6 +14,7 @@
            display: grid;
            //TODO: make it dynamic
            grid-template-columns: repeat(6, 1fr);
+           scroll-behavior: smooth;
            gap: 2rem;
            padding:0 5rem 2rem 2rem;
            height: 100%;
@@ -34,6 +35,7 @@
                cursor: pointer;
                width: 250px;
                height: 250px;
+               overflow: hidden;
 
                .overlay {
                    position: absolute;
@@ -47,6 +49,7 @@
                    @include center-children;
                    flex-direction: column;
                    text-align: center;
+                   z-index: 3;
                    & * {
                        display: none;
                    }
@@ -62,6 +65,7 @@
                 img {
                     width: 100%;
                     height: 100%;
+                    transform: translateY(-100%);
                 }
            }
         }
@@ -80,6 +84,14 @@
             cursor: pointer;
             @include center-children;
             font-size: 2rem;
+            z-index: 5;
+            transition: all 0.3s linear;
+
+            &:hover {
+                background: $secondary-color;
+                color: $primary-dark;
+                border: 2px solid $primary-dark;
+            }
         }
 
         .scroll-right {
